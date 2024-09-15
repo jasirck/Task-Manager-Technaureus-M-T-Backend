@@ -27,18 +27,23 @@ This is the backend for a task manager application built with Django and Django 
    git clone https://github.com/jasirck/Task-Manager-Technaureus-M-T-Backend.git
    cd Task-Manager-Technaureus-M-T-Backend
 
-2.
-   python -m venv env
-   source env/bin/activate  # On Windows: env\Scripts\activate
 
-3.
+2. Activate virtual environments:
+    ```bash 
+   python3 -m venv env
+   source env/bin/activate  # On Windows: env\Scripts\activate
+   
+4. Install requirements :
+
+   ```bash
    pip install -r requirements.txt
 
-4.
-   python manage.py makemigrations
-   python manage.py migrate
+5. Creating makemigration files and apply makemigration files
+   ```bash
+   python3 manage.py makemigrations
+   python3 manage.py migrate
 
-5.
+6. Activate Server
    python manage.py runserver
 
 
