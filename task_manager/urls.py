@@ -5,7 +5,6 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('tasks.urls')),
+    path('api/', include('tasks.urls')),#My task manager app
     path('api/token/', TokenObtainPairView.as_view(), name='token'),
-    # path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]

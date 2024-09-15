@@ -7,10 +7,10 @@ from rest_framework.exceptions import ValidationError
 from tasks.models import Task,CustomUser
 from tasks.serializers import TaskSerializer,UserSerializer
 
-
 User = get_user_model()
 
-class AuthTests(APITestCase):
+# Authentication testing
+class Auth(APITestCase):
     def test_register_user(self):
         url = reverse('register')  # Ensure this matches the URL pattern for RegisterView
         data = {
@@ -33,7 +33,9 @@ class AuthTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertIn('access', response.data)
 
-class TaskTests(APITestCase):
+
+# Task CRUD testing
+class Task(APITestCase):
     def setUp(self):
         self.user = User.objects.create_user(username='testuser', password='securepassword')
         self.token = str(RefreshToken.for_user(self.user).access_token)
@@ -58,7 +60,8 @@ class TaskTests(APITestCase):
         self.assertEqual(response.data['title'], 'Updated Task')
         self.assertEqual(response.data['status'], 'completed')
 
-class UserSerializerTests(APITestCase):
+# User Serializer conversion testing
+class UserSerializers(APITestCase):
     def test_valid_user_serializer(self):
         data = {
             'username': 'testuser',

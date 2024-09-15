@@ -1,11 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
-
+# New AbstractUser for customizing the user model
 class CustomUser(AbstractUser):
     email = models.EmailField(unique=True, null=False) 
     username = models.CharField(max_length=150, unique=True, null=False)  
 
+# Task manager table structure
 class Task(models.Model):
     title = models.CharField(max_length=255,null=False)
     description = models.TextField(blank=True, null=True)

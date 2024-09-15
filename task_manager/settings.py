@@ -1,15 +1,17 @@
 from pathlib import Path
 from datetime import timedelta
 
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-t8r24adrg=_jxgg+c82^e#dxz_n%se2w2^6lz)k$)yer08*1!t'
 DEBUG = True
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
+# Allowing cross-origin requests from the React application.
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    # Add other origins if needed
+    
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
@@ -44,7 +46,7 @@ REST_FRAMEWORK = {
     ),
 }
 
-from datetime import timedelta
+
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),
@@ -108,6 +110,7 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
+# My new abstract table model
 AUTH_USER_MODEL = 'tasks.CustomUser' 
 
 STATIC_URL = 'static/'

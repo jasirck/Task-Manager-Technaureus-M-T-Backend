@@ -7,9 +7,11 @@ This is the backend for a task manager application built with Django and Django 
 ## Features
 
 - User registration and login
-- Task creation, retrieval, updating, and deletion
-- Filter tasks by status and search by title
-- JWT authentication for secure access
+- User-task association: Each user can access their own tasks.
+- Task management: Creation, retrieval, updating, and deletion of tasks.
+- Task filtering and search: Filter tasks by status and search by title.
+- JWT authentication: Secure access using JSON Web Tokens.
+
 
 ## Getting Started
 
