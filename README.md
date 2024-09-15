@@ -26,17 +26,17 @@ This is the backend for a task manager application built with Django and Django 
    cd Task-Manager-Technaureus-M-T-Backend
 
 2.
-python -m venv env
-source env/bin/activate  # On Windows: env\Scripts\activate
+   python -m venv env
+   source env/bin/activate  # On Windows: env\Scripts\activate
 
 3.
-pip install -r requirements.txt
+   pip install -r requirements.txt
 
 4.
-python manage.py makemigrations
-python manage.py migrate
+   python manage.py makemigrations
+   python manage.py migrate
 
 5.
-python manage.py runserver
+   python manage.py runserver
 
 
