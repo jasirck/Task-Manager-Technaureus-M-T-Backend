@@ -46,5 +46,3 @@ This is the backend for a task manager application built with Django and Django 
 6. Activate Server
    ```bash
    python3 manage.py runserver
-
-
